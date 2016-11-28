@@ -1,6 +1,6 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { addMovie, updateFirstUse } from '../actions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { addMovie } from '../actions';
 
 let AddMovie = ({ dispatch }) => {
 
@@ -13,14 +13,21 @@ let AddMovie = ({ dispatch }) => {
       <h2 className="add-movie__title">Add movies to your collection!</h2>
       <form onSubmit={e => {
         
-        e.preventDefault()
-        if (!title.value.trim()) {
-          //this is the basic validation for the empty form field
-          return
-        }
-        dispatch(addMovie(title.value, year.value, actors.value))
-        dispatch(updateFirstUse(false))
+        e.preventDefault();
 
+        //simple validation empty check
+        if (!title.value.trim()) {
+          return
+        };
+
+        if (!year.value.trim()) {
+          return
+        };
+
+        //dispath the action and add the new movie
+        dispatch(addMovie(title.value, year.value, actors.value));
+
+        //clear the fields
         title.value = '';
         year.value = '';
         actors.value = '';
@@ -33,6 +40,6 @@ let AddMovie = ({ dispatch }) => {
     </section>
   )
 }
-AddMovie = connect()(AddMovie)
+AddMovie = connect()(AddMovie);
 
-export default AddMovie
+export default AddMovie;

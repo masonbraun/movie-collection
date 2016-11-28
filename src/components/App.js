@@ -1,8 +1,8 @@
-import React from 'react'
-import AddMovie from '../containers/AddMovie'
-import VisibleCollection from '../containers/VisibleCollection'
-import SearchContainer from '../containers/SearchContainer'
-import '../styles/App.css'
+import React from 'react';
+import AddMovie from '../containers/AddMovie';
+import VisibleCollection from '../containers/VisibleCollection';
+import SearchContainer from '../containers/SearchContainer';
+import '../styles/App.css';
 
 const App = () => (
   <main className="movie-collection">
@@ -11,6 +11,6 @@ const App = () => (
     <VisibleCollection />
     <SearchContainer />
   </main>
-)
+);
 
-export default App
+export default App;

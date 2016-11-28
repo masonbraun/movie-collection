@@ -5,6 +5,6 @@ const searchTerm = (state = '', action) => {
     default:
       return state
   }
-}
+};
 
-export default searchTerm
+export default searchTerm;
