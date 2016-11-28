@@ -47,6 +47,13 @@ table {
   border-spacing: 0;
 }
 
+/*app styles*/
+
+body {
+  background: url("http://masonbraun.com/images/popcorn.jpg") no-repeat;
+  background-size: cover;
+}
+
 .movie-collection {
   width: 100%;
   max-width: 600px;
@@ -107,4 +114,36 @@ table {
   list-style-type: decimal-leading-zero;
   font-family: 'Bungee', cursive;
   font-size: 20px;
+}
+
+.movie {
+  position: relative;
+  margin-bottom: 20px;
+  border: solid 2px black;
+  padding: 10px;
+}
+
+.movie:hover .movie__delete {
+  display: block;
+}
+
+.movie__delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+}
+
+.movie__details--title {
+  margin-bottom: 20px;
+}
+
+.movie__details--actors {
+  font-size: 14px;
+}
+
+.movie__delete:hover {
+  color: red;
 }

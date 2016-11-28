@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
 
 const Movie = ({ onClick, title, year, actors }) => (
-  <div>
-    <p>{title} ({year})</p>
-    <p>Starring: {actors.replace(/\n/g, " - ")}</p>
-    <span onClick={onClick}>X</span>
+  <div className="movie">
+    <p className="movie__details movie__details--title">{title} ({year})</p>
+    <p className="movie__details movie__details--actors">Starring: {actors.replace(/\n/g, " - ")}</p>
+    <span className="movie__delete" onClick={onClick}>X</span>
   </div>
 )
 
